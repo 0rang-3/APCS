@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println(insertStarV2("abcdefg"));
-        System.out.println(countX("woihxioh", 0));
+        System.out.println(countX("xdxdssd", 0));
     }
 
     public static String insertStarV1(String in) {
@@ -24,9 +24,12 @@ public class App {
         return insertStarV2(a) + "*" + insertStarV2(b);
     }
 
-    public int countX(String in, int counter) {
-        if(in.equals("x")) {
-            return counter++;
+    public static int countX(String in, int counter) {
+        if(in.length() == 1) {
+            if(in.equals("x")) {
+                counter++;
+            }
+            return counter;
         }
 
         String a = in.substring(0, 1);
